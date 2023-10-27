@@ -25,6 +25,8 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 nnoremap <leader>RR :source ~/.config/nvim/init.vim<CR>
 
 set nowrap
+
+" statusline colors
 au ModeChanged *:[vV\x16]* hi statusline guibg=DarkGrey ctermfg=13 guifg=White ctermbg=2
 au ModeChanged *:[nN\x16]* hi statusline guibg=DarkGrey ctermfg=8 guifg=White ctermbg=15
 au ModeChanged *:[iI\x16]* hi statusline guibg=Cyan ctermfg=2 guifg=White ctermbg=2
@@ -47,3 +49,5 @@ set statusline+=Line:%l/%L[%p%%]            " line X of Y [percent of file]
 set statusline+=\ Col:%c                    " current column
 set statusline+=\ Buf:%n                    " Buffer number
 set statusline+=\ [%b][0x%B]\               " ASCII and byte code under cursor
+
+au! BufRead,BufNewFile *dev* setfiletype stdio
