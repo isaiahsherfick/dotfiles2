@@ -1,3 +1,5 @@
 #!/bin/bash
-cp ~/.config/nvim/init.vim ./recoveryinit.vim
-cp ./.config/nvim/init.vim ~/.config/nvim/init.vim 2>/dev/null 
+mkdir ~/.config/nvim 
+cp ./.config/nvim/init.vim ~/.config/nvim/init.vim 
+cp ./.bashrc ~/.bashrc
+cp ./.tmux.conf ~/.tmux.conf
