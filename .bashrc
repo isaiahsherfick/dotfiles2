@@ -26,6 +26,7 @@ fi
 
 unset rc
 PS1='\[\e[92m\]\u\[\e[0m\]@\[\e[96m\]$(ip route get 1.1.1.1 | awk -F"src " '"'"'NR == 1{ split($2, a," ");print a[1]}'"'"')\[\e[38;5;168m\]\w\[\e[0m\]\\$ '
+export MANPAGER="nvim +Man!"
 alias rl="source ~/.bashrc"
 alias vim="nvim"
 alias g="cd ~/git"
@@ -34,3 +35,4 @@ alias tm="tmux"
 alias b="vim ~/.bashrc"
 alias br="b"
 alias grep="rg"
+alias ls="ls --color=always"
